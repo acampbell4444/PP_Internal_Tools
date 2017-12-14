@@ -18,7 +18,7 @@ import Login from './components/Login'
 import WhoAmI from './components/WhoAmI'
 import NotFound from './components/NotFound'
 
-const PP_Internal_Tools = connect(
+const PpInternalTools = connect(
   ({ auth }) => ({ user: auth })
 )(
   ({ user, children }) =>
@@ -33,7 +33,7 @@ const PP_Internal_Tools = connect(
 render(
   <Provider store={store}>
     <Router history={browserHistory}>
-      <Route path="/" component={PP_Internal_Tools}>
+      <Route path="/" component={PpInternalTools}>
         <IndexRedirect to="/home" />
         <Route path="/home" component={Home} />
       </Route>
